@@ -1,0 +1,3 @@
+export const SUPABASE_URL = "https://hhomeacyrvbxokidecvd.supabase.co";
+export const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhob21lYWN5cnZieG9raWRlY3ZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwOTc0NjIsImV4cCI6MjA1MzY3MzQ2Mn0.-cCeoEYQ1CqsQT5yF_jV2iWDCv8rv6hRIluQjXX3lZQ";
