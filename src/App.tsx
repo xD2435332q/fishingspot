@@ -4,6 +4,9 @@ import Home from "./components/home";
 import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from "./components/admin/Dashboard";
 import routes from "tempo-routes";
+import RentalDetail from "./components/RentalDetail";
+import ExperienceDetail from "./components/ExperienceDetail";
+import OfferDetail from "./components/OfferDetail";
 
 // Lazy load admin pages
 const ExperiencesAdmin = lazy(
@@ -14,9 +17,12 @@ const RentalsAdmin = lazy(() => import("./components/admin/RentalsAdmin"));
 
 function App() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p>Cargando...</p>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/rentals/:id" element={<RentalDetail />} />
+        <Route path="/experiences/:id" element={<ExperienceDetail />} />
+        <Route path="/offers/:id" element={<OfferDetail />} />
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>

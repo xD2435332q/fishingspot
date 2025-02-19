@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import MainLayout from "./layouts/MainLayout";
 import HeroSection from "./HeroSection";
 import PopularSpots from "./PopularSpots";
 import OffersSection from "./OffersSection";
@@ -45,21 +45,11 @@ const Home = ({
   offers,
 }: HomeProps) => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar
-        onLoginClick={onLoginClick}
-        onRegisterClick={onRegisterClick}
-        isLoggedIn={isLoggedIn}
-        userName={userName}
-      />
-      <main className="pt-[72px]">
-        {" "}
-        {/* Offset for fixed navbar */}
-        <HeroSection onSearch={onSearch} />
-        <PopularSpots spots={spots} />
-        <OffersSection offers={offers} />
-      </main>
-    </div>
+    <MainLayout isLoggedIn={isLoggedIn} userName={userName}>
+      <HeroSection onSearch={onSearch} />
+      <PopularSpots spots={spots} />
+      <OffersSection offers={offers} />
+    </MainLayout>
   );
 };
 
