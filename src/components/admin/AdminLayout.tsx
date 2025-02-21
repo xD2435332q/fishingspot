@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Button } from "../ui/button";
-import { LayoutDashboard, Compass, Tag, Home } from "lucide-react";
+import { LayoutDashboard, Compass, Tag, Home, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
 
@@ -13,6 +13,7 @@ const AdminLayout = () => {
     { icon: Compass, label: "Experiencias", href: "/admin/experiences" },
     { icon: Tag, label: "Ofertas", href: "/admin/offers" },
     { icon: Home, label: "Alquileres", href: "/admin/rentals" },
+    { icon: BookOpen, label: "Spots", href: "/admin/spots" },
   ];
 
   return (
